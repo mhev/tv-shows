@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Show</title>
+</head>
+<body>
+
+    <form action="/process/{{show.id}}" method="POST">
+        {% csrf_token %}
+
+    
+    
+    <h1>Edit Show</h1> <a href="">Go Back</a>
+
+    <p>Title</p><br>
+    <input type="text" class="titlebox" name="title" value="{{show.title}}"><br>
+
+    <h5>Network</h5><br>
+    <input type="text" class="midbox" name="network" value="{{show.network}}"><br>
+    <h5>Release Date</h5><br>
+    <input type="date" class="midbox" name="rldate" value="{{show.rldate|date:'Y-m-d'}}"><br>
+
+    <p>Description</p>
+    <input type="text" class="commentbox" name="comment" value="{{show.description}}"><br>
+
+    <button type="submit">Update</button>
+
+    </form>
+
+    
+</body>
+</html>

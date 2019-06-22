@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add a new show</title>
+    <style>
+        a, h1{
+            display: inline-block;
+        }
+        a {
+            margin-left: 300px;
+        }
+
+        h5 {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .commentbox{
+            width: 300px;
+            height: 200px;
+            line-height: 50px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <form action="/addshow" method="POST">
+        {% csrf_token %}
+
+    
+   
+    <h1>Add a New Show</h1> <a href="">Go Back</a>
+
+    <p>Title</p><br>
+    <input type="text" class="titlebox" name="title"><br>
+
+    <h5>Network</h5><br>
+    <input type="text" class="midbox" name="network"><br>
+    <h5>Release Date</h5><br>
+    <input type="date" class="midbox" name="rldate"><br>
+
+    <p>Description</p>
+    <input type="text" class="commentbox" name="description"><br>
+
+    <button type="submit">Create</button>
+
+    </form>
+    
+</body>
+</html>
